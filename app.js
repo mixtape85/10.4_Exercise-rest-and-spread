@@ -11,19 +11,18 @@ function filterOutOdds() {
 }
 Refactor it to use the rest operator & an arrow function:
 */
-
-/* Write an ES2015 Version */
+const filterOutOdds = (...args) => args.filter(num => num % 2 === 0);
 
 /*
 findMin
 Write a function called findMin that accepts a variable number of arguments and returns the smallest argument.
-
 Make sure to do this using the rest and spread operator.
 
 findMin(1,4,12,-3) // -3
 findMin(1,-1) // -1
 findMin(3,1) // 1
 */
+const findMin = (...args) => Math.min(...args);
 
 /*
 mergeObjects
@@ -31,7 +30,7 @@ Write a function called mergeObjects that accepts two objects and returns a new 
 
 mergeObjects({a:1, b:2}, {c:3, d:4}) // {a:1, b:2, c:3, d:4}
 */
-
+const mergeObjects = (obj1, obj2) => ({...obj1}, {...obj2});
 
 /* 
 doubleAndReturnArgs
@@ -40,6 +39,7 @@ Write a function called doubleAndReturnArgs which accepts an array and a variabl
 doubleAndReturnArgs([1,2,3],4,4) // [1,2,3,8,8]
 doubleAndReturnArgs([2],10,4) // [2, 20, 8]
 */
+
 
 /* 
 Slice and Dice!
